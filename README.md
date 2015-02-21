@@ -43,4 +43,15 @@ Therefore, first a vector of the names in the *featuresfilt* data set is created
 
 ## Creating an independent tidy data set with the average of each variable for each activity and each subject
 
-BLA.
+I need to compute the average of all the measures (measure variables) for each value of "subject" and "activity" ("factor" variables), so I have used ```lapply``` for this taking advantage of ```.SD```, which contains the values of all columns except the one(s) specified in by. This gives the ouput file of the whole process, *dataDTmeans*.
+
+The final step is exporting *dataDTmeans* data set to a txt file using  ```write.table()```. If the reader or user wants to import this file from the project evaluation interface, the following piece of code should be run: ```projectdata<-read.table("https://s3.amazonaws.com/coursera-uploads/user-b2c76e5280752fff92288a27/973498/asst-3/8acd8b30b9ab11e485033bb58f21a5b0.txt",header=TRUE)```.
+
+
+## References:
+
+The course's discussion forums were very useful for me to understand the project itself and for reference on how to build the script, this README file and also the Codebook. Specially useful were: 
+ - [David's Course Project FAQ] (https://class.coursera.org/getdata-011/forum/thread?thread_id=69)
+ - [Any standard format for codebook?] (https://class.coursera.org/getdata-011/forum/thread?thread_id=204)
+
+ 
