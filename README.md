@@ -29,8 +29,18 @@ I have deliberately decided not to load the data in the "Inertial Signals" folde
 I have considered as mean and standard deviation measurements only the variables with "mean" or "std" as part of their name. In order to extract only those variables I have used the provided data set *features.txt* and filtered the variables with "mean" or "std" as part of their names using the function ```grep()```. Then I got the variables' column indexes and used those indexes to subset the data set in order to keep only the columns wanted, plus the two last columns (activity and subject).
 
 
-Renaming the activities with descriptive names
-----------------------------------------------
+## Renaming the activities with descriptive names
 
 In order to do this I have used the provided data set *activity_labels.txt*, and then paste it to the data adding a new variable with the name of the activity. Finally, I discard the original variable with the non-descriptive names of the activities, because it is no longer needed.
 
+
+## Labeling the data set with descriptive variable names
+
+In this section I take advantage of the data set *featuresfilt* created in the second step of this script. This set contains the position indices and names of the all the features in the merged data set, except the one that identifies the subject and the one that identifies the activity type.
+
+Therefore, first a vector of the names in the *featuresfilt* data set is created, and then the last two names "subject" and "activity" are added to the vector. Finally, the names of the columns are given by linking them to the contents of the vector. I have deleted from the names some characters that could cause problems later: "-", "(" and ")" with the function ```gsub()```. 
+
+
+## Creating an independent tidy data set with the average of each variable for each activity and each subject
+
+BLA.
