@@ -24,3 +24,8 @@ In this section the data sets for the training sample (*X_train.txt*, *y_train.t
 I have deliberately decided not to load the data in the "Inertial Signals" folder because I think it is not necessary for doing what is asked the project (in step 2 it is asked to keep in the data set only the mean and standard deviations, and in the Inertial Signals folder there is no information about that, according to the information provided here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
 
+## Extracting only the measurements of the mean and standard deviation
+
+I have deliberately considered as mean and standard deviation measurements only the variables with "mean" or "std" as part of their name. In order to extract only those variables I have used the provided data set "features.txt", then filtered the variables with "mean" or "std" as part of their names using the function ```grep()```, got their column indexes and used those indexes to subset the data set in order to keep only the columns wanted, plus the two last columns (activity and subject).
+
+I have deliberately decided not to load the data in the "Inertial Signals" folder because I think it is not necessary for doing what is asked the project (in step 2 it is asked to keep in the data set only the mean and standard deviations, and in the Inertial Signals folder there is no information about that, according to the information provided here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
