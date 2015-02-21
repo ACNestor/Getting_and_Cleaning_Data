@@ -1,2 +1,2 @@
-# Getting_and_Cleaning_Data
-Here I will put the files needed for the Getting and Cleaning Data course project (Courera, Data Science Specialization)
+# Getting and Cleaning Data Project's readme
+The purpose of this file is walking the reader throguh the script run_analysis.R, so that he/she understands how it works. The details about the variables can be found at the codebook. 
