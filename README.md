@@ -2,7 +2,7 @@
 ============================================
 The purpose of this file is walking the reader throguh the script *run_analysis.R*, so that he/she understands how it works. The details about the variables can be found at the codebook, also provided in this repo. 
 
-The script has the following six sections:
+The script has the following five sections:
 
 1. Importing and merging all the data sets
 
@@ -13,4 +13,12 @@ The script has the following six sections:
 4. Labeling the data set with descriptive variable names
 
 5. Creating an independent tidy data set with the average of each variable for each activity and each subject
+
+
+The code script starts setting the working directory and requiring the data.table package. The working directory used for the development of the code has been left as an example, but this should be changed to the reader's or user's actual working directory. Following, the code in each of the sections is explained:
+
+## Importing and merging all the data sets provided
+---------------------------------------------------
+
+In this section the data sets for the training sample (*X_train.txt*, *y_train.txt* and *subject_train.txt*)  and for the test sample (*X_test.txt*, *y_test.txt* and *subject_test.txt*) are read into R and merged together. First the training data set is created reading the three training data sets and merging them **horizontally**, and then the same is done for creating the test data set. Finally, both training and test sets are merged together **vertically**.
 
