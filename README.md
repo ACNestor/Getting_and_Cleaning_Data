@@ -36,7 +36,7 @@ In order to do this I have used the provided data set *activity_labels.txt*, and
 
 ## Labeling the data set with descriptive variable names
 
-In this section I take advantage of the data set *featuresfilt* created in the second step of this script. This set contains the position indices and names of the all the features in the merged data set, except the one that identifies the subject and the one that identifies the activity type.
+In this section I take advantage of the data set *featuresfilt* created in the second step of this script. This set contains the position indices and names of the all the features in the merged data set, except the ones that identify the subject and the activity type.
 
 Therefore, first a vector of the names in the *featuresfilt* data set is created, and then the last two names "subject" and "activity" are added to the vector. Finally, the names of the columns are given by linking them to the contents of the vector. I have deleted from the names some characters that could cause problems later: "-", "(" and ")" with the function ```gsub()```. 
 
