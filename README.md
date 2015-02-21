@@ -26,6 +26,11 @@ I have deliberately decided not to load the data in the "Inertial Signals" folde
 
 ## Extracting only the measurements of the mean and standard deviation
 
-I have deliberately considered as mean and standard deviation measurements only the variables with "mean" or "std" as part of their name. In order to extract only those variables I have used the provided data set "features.txt", then filtered the variables with "mean" or "std" as part of their names using the function ```grep()```, got their column indexes and used those indexes to subset the data set in order to keep only the columns wanted, plus the two last columns (activity and subject).
+I have considered as mean and standard deviation measurements only the variables with "mean" or "std" as part of their name. In order to extract only those variables I have used the provided data set *features.txt* and filtered the variables with "mean" or "std" as part of their names using the function ```grep()```. Then I got the variables' column indexes and used those indexes to subset the data set in order to keep only the columns wanted, plus the two last columns (activity and subject).
 
-I have deliberately decided not to load the data in the "Inertial Signals" folder because I think it is not necessary for doing what is asked the project (in step 2 it is asked to keep in the data set only the mean and standard deviations, and in the Inertial Signals folder there is no information about that, according to the information provided here: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
+
+Renaming the activities with descriptive names
+----------------------------------------------
+
+In order to do this I have used the provided data set *activity_labels.txt*, and then paste it to the data adding a new variable with the name of the activity. Finally, I discard the original variable with the non-descriptive names of the activities, because it is no longer needed.
+
