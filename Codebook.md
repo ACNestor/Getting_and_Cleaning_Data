@@ -10,4 +10,15 @@ http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartpho
 
 Following, the variables in the *dataDTmeans* are detailed:
 
-### Activity
+### activity
+Type of data: Factor
+Units: None, it just names the different types of activities recorded
+Values: LAYING, SITTING, STANDING, WALKING, WALKING_DOWNSTAIRS, WALKING_UPSTAIRS
+Variable of origin: The only column in Y_train.txt and Y_test.txt, and the labels in activities.txt
+
+### subject
+Type of data: Integer
+Units: None, it just names the different subjets who performed the activities
+Values: 1 to 30 (30 different subjects)
+Variable of origin: The only column in files Subject_train.txt and Subject_test.txt
+
